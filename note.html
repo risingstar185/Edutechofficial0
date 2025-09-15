@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Notes Download</title>
+<style>
+  /* === Background Animated Gradient === */
+  body {
+    margin:0; font-family: Poppins,Arial,Helvetica,sans-serif;
+    color:#111; 
+    background: linear-gradient(-45deg,#fbc2eb,#a6c1ee,#fad0c4,#ffd1ff);
+    background-size: 400% 400%;
+    animation: bgMove 14s ease infinite;
+  }
+  @keyframes bgMove {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+
+  /* === Header === */
+  header {
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(12px);
+    padding:18px 28px;
+    display:flex;align-items:center;justify-content:space-between;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+  }
+  .brand{font-weight:700;font-size:20px;color:#4a1d96;letter-spacing:0.5px;}
+  nav a{margin-left:16px;text-decoration:none;color:#4a1d96;font-weight:500;transition:.3s;}
+  nav a:hover{color:#7c3aed;}
+
+  /* === Notes Grid === */
+  .grid{max-width:1100px;margin:40px auto;display:flex;flex-wrap:wrap;gap:20px;padding:0 18px;}
+  .card{
+    flex:1 1 calc(33.3% - 20px);min-width:260px;
+    background:rgba(255,255,255,0.75);backdrop-filter:blur(10px);
+    border-radius:16px;overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.12);
+    transition:transform .35s,box-shadow .35s;
+    position:relative;
+  }
+  .card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 18px 36px rgba(0,0,0,0.2);}
+  .thumb{width:100%;height:150px;object-fit:cover;}
+  .card-body{padding:16px;}
+  .card-body h3{margin:0;font-size:18px;color:#111;}
+  .card-body p{font-size:14px;color:#555;margin:8px 0 14px;}
+  .tags span{font-size:12px;background:#ede9fe;color:#4a1d96;
+    padding:4px 8px;border-radius:6px;margin-right:6px;}
+  .btns{display:flex;gap:10px;margin-top:12px;}
+  .btn{
+    flex:1;padding:10px;border:none;border-radius:8px;
+    font-size:14px;font-weight:600;cursor:pointer;transition:.3s;
+    text-align:center;text-decoration:none;display:inline-block;
+  }
+  .download{background:linear-gradient(90deg,#7c3aed,#4f46e5);color:white;}
+  .download:hover{opacity:0.9;}
+  .preview{background:#fff;border:1px solid #ddd;color:#333;}
+  .preview:hover{background:#f4f4f4;}
+
+  /* === Footer === */
+  footer{
+    margin-top:40px;padding:24px;
+    background:rgba(0,0,0,0.65);color:white;
+    text-align:center;
+    backdrop-filter:blur(8px);
+  }
+  .socials a{
+    margin:0 8px;display:inline-flex;align-items:center;justify-content:center;
+    width:40px;height:40px;border-radius:50%;
+    background:rgba(255,255,255,0.1);
+    color:white;text-decoration:none;font-size:18px;
+    transition:.3s;
+  }
+  .socials a:hover{transform:translateY(-5px) scale(1.1);background:rgba(255,255,255,0.3);}
+  @media(max-width:768px){.card{flex:1 1 100%;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">📘 NotesHub</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#notes">Notes</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="notes" class="grid">
+  <!-- Card 1 -->
+  <div class="card">
+    <img class="thumb" src="https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2022/09/oses.jpg" alt="note">
+    <div class="card-body">
+      <h3>Operating System Notes</h3>
+      <p>Summary of process scheduling, memory & threads.</p>
+      <div class="tags"><span>OS</span><span>CS</span></div>
+      <div class="btns">
+        <a href="files/os-notes.pdf" download class="btn download">Download</a>
+        <a href="files/os-notes.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJtVT5JBtyqCpePadztNLv7bbBaFbIvevTEw&s" alt="note">
+    <div class="card-body">
+      <h3>DBMS Cheatsheet</h3>
+      <p>SQL commands, normalization & ER diagrams in one sheet.</p>
+      <div class="tags"><span>DBMS</span><span>SQL</span></div>
+      <div class="btns">
+        <a href="files/dbms-cheatsheet.pdf" download class="btn download">Download</a>
+        <a href="files/dbms-cheatsheet.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img class="thumb" src="https://universae.com/wp-content/uploads/2023/06/que-es-el-networking.webp" alt="note">
+    <div class="card-body">
+      <h3>Networking Formulas</h3>
+      <p>Throughput, delay, bandwidth & subnetting quick guide.</p>
+      <div class="tags"><span>CN</span><span>Formulas</span></div>
+      <div class="btns">
+        <a href="files/networking-formulas.pdf" download class="btn download">Download</a>
+        <a href="files/networking-formulas.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCHn68-VsE7VrVPrsb3x0IoqFFNVUTxzVLgQ&s" alt="note">
+    <div class="card-body">
+      <h3>Cyber Security</h3>
+      <p>Throughput, delay, bandwidth & subnetting quick guide.</p>
+      <div class="tags"><span>CN</span><span>Os</span></div>
+      <div class="btns">
+        <a href="files/networking-formulas.pdf" download class="btn download">Download</a>
+        <a href="files/networking-formulas.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="thumb" src="https://miro.medium.com/1*J38nYZU7gzu-4lQmtjlSUw.jpeg" alt="note">
+    <div class="card-body">
+      <h3>Networking Formulas</h3>
+      <p>Throughput, delay, bandwidth & subnetting quick guide.</p>
+      <div class="tags"><span>Data structure</span><span>Algorithm</span></div>
+      <div class="btns">
+        <a href="files/networking-formulas.pdf" download class="btn download">Download</a>
+        <a href="files/networking-formulas.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="thumb" src="https://play-lh.googleusercontent.com/WCwcq3DvY0pbaTqUfU1ToySB2s5mmqAUxcLcTN3Y2J5l-sDwS2L2z6_qmCYNX9wdXg" alt="note">
+    <div class="card-body">
+      <h3>C language</h3>
+      <p>Throughput, delay, bandwidth & subnetting quick guide.</p>
+      <div class="tags"><span>C</span><span>Formulas</span></div>
+      <div class="btns">
+        <a href="files/networking-formulas.pdf" download class="btn download">Download</a>
+        <a href="files/networking-formulas.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3S9FqOWEjqGZPQ98L55jzxu9OXbJqwXx_Gw&s" alt="note">
+    <div class="card-body">
+      <h3>Java notes</h3>
+      <p>Throughput, delay, bandwidth & subnetting quick guide.</p>
+      <div class="tags"><span>Java</span><span>Algo</span></div>
+      <div class="btns">
+        <a href="files/networking-formulas.pdf" download class="btn download">Download</a>
+        <a href="files/networking-formulas.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <img class="thumb" src="https://picsum.photos/400/200?3" alt="note">
+    <div class="card-body">
+      <h3>python Language</h3>
+      <p>Throughput, delay, bandwidth & subnetting quick guide.</p>
+      <div class="tags"><span>CN</span><span>python </span></div>
+      <div class="btns">
+        <a href="files/networking-formulas.pdf" download class="btn download">Download</a>
+        <a href="files/networking-formulas.pdf" target="_blank" class="btn preview">Preview</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Made with ❤️ for students — NotesHub © 2025</p>
+  <div class="socials">
+    <a href="#">🌐</a>
+    <a href="#">🐦</a>
+    <a href="#">💼</a>
+    <a href="#">📸</a>
+  </div>
+</footer>
+
+</body>
+</html>
