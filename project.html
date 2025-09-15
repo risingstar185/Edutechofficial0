@@ -1,11 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8" />
+  <title>My Projects — Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    /* 🔥 Background gradient animation */
+    body {
+      background: linear-gradient(-45deg, #f4f6f8, #dbeafe, #fef3c7, #fbcfe8);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      font-family: Arial, Helvetica, sans-serif;
+      margin:0;
+      color:#111;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Header animation */
+    header {
+      background: linear-gradient(90deg,#3563E9,#6B8CF5,#4f46e5);
+      background-size: 300% 300%;
+      animation: headerAnim 8s ease infinite;
+      color:white; 
+      padding:28px 20px;
+    }
+    @keyframes headerAnim {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Footer animation */
+    footer {
+      background: linear-gradient(90deg,#111827,#1f2937,#111827);
+      background-size: 200% 200%;
+      animation: footerAnim 10s ease infinite;
+      color:white;
+    }
+    @keyframes footerAnim {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Card hover */
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-6px); box-shadow:0 10px 22px rgba(0,0,0,0.2); }
+
+    /* Mobile responsive */
+    @media (max-width: 800px) {
+      .grid { flex-direction: column; }
+      .card { width: 96% !important; margin: 8px auto; }
+      header { text-align: center; }
+    }
+
+    /* Social links */
+    .social a {
+      color:white;
+      margin: 0 8px;
+      font-size: 20px;
+      text-decoration:none;
+      transition: opacity 0.3s ease;
+    }
+    .social a:hover { opacity:0.7; }
+  </style>
 </head>
 <body>
-  uplaoding soon..
+
+  <!-- Header -->
+  <header>
+    <div style="max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="width:56px; height:56px; border-radius:8px; background:white; display:flex; align-items:center; justify-content:center; font-weight:700; color:#4c70df;">MP</div>
+        <div>
+          <h1 style="margin:0; font-size:20px;">My Mini Projects</h1>
+          <div style="opacity:0.9; font-size:13px;">A tiny portfolio of practical projects</div>
+        </div>
+      </div>
+      <nav style="display:flex; gap:12px; align-items:center;">
+        <a href="#projects" style="color:white; text-decoration:none; padding:8px 12px; border-radius:6px; background:rgba(255,255,255,0.15);">Projects</a>
+        <a href="#contact" style="color:white; text-decoration:none; padding:8px 12px; border-radius:6px; background:rgba(255,255,255,0.15);">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section style="max-width:1100px; margin:22px auto; padding:0 18px;">
+    <p style="margin:8px 0 18px; color:#333;">
+      Below are <strong style="color:#111"> projects</strong> — each card has an image, short description, 
+      tech tags and links.
+    </p>
+
+    <!-- Grid -->
+    <div id="projects" class="grid" style="display:flex; flex-wrap:wrap; gap:14px; align-items:flex-start;">
+      
+      <!-- Example Project Card -->
+      <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIU305WN1DAADxGSL-lh6opFJasNtXOY1T6w&s" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">QR GENERATOR</h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+            A small Qr generator Website 
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href=" https://risingstar185.github.io/qr-code/" style="text-decoration:none;padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:800; margin-left: 100px;">Live</a>
+  
+          </div>
+        </div>
+      </article>
+         <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://www.sliderrevolution.com/wp-content/uploads/2021/09/Volna.jpg" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">Music Website </h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+           Just Find your Tune ?
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://clever-platypus-338e91.netlify.app/" style="text-decoration:none; padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:600;margin-left: 100px;">Live</a>
+  
+          </div>
+        </div>
+      </article>
+         <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuF5XR6o0U3K2bjR7uq8BYxpJbwcH47KugEg&s" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">Calculator</h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+           A Calculator website 
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://risingstar185.github.io/calculator "style="text-decoration:none; padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:600;margin-left:100px">Live</a>
+  
+          </div>
+        </div>
+      </article>
+         <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://m.media-amazon.com/images/G/01/poppin/DestinationPage/amazon-live-default.jpg" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">Amazon clone </h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+            A Static amazon Clone Website 
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://risingstar185.github.io/amazonclone/" style="text-decoration:none; padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:600;margin-left: 100px;">Live</a>
+  
+          </div>
+        </div>
+      </article>
+
+         <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdG-EzYjIu5I5f7O9vboUZjFlQcMejuwMqmA&s" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">Puzzle Game</h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+            A puzzle game drag and drop just
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href=" https://risingstar185.github.io/Puzzle/" style="text-decoration:none; padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:600;margin-left: 100px;">Live</a>
+  
+          </div>
+        </div>
+      </article>
+         <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://www.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej.png" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">Image search website</h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+            A Image search engine website
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://risingstar185.github.io/imagesearch/" style="text-decoration:none; padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:600; margin-left: 100px;">Live</a>
+  
+          </div>
+        </div>
+      </article>
+        </article>
+         <article class="card" style="width:calc(33% - 12px); min-width:260px; background:white; border-radius:10px; box-shadow:0 6px 18px rgba(20,30,60,0.06); overflow:hidden;">
+        <img src="https://i.ytimg.com/vi/RroDdybvu5s/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAJ9Z8bCU10U3JtCLkhXNErdirz6A.png" style="width:100%; height:140px; object-fit:cover;" alt="Project Image">
+        <div style="padding:14px;">
+          <h3 style="margin:0 0 8px; font-size:16px;">Portfolio Website</h3>
+          <p style="margin:0 0 12px; font-size:13px; color:#444;">
+           This is my Portfolio website
+          </p>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef3ff;">HTML</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#eef6ec;">JS</span>
+            <span style="font-size:12px; padding:6px 8px; border-radius:6px; background:#fff5e6;">LocalStorage</span>
+          </div>
+          <div style="display:flex; gap:8px;">
+            <a href="https://risingstar185.github.io/risingstar/" style="text-decoration:none; padding:8px 12px; border-radius:8px; background:#3563E9; color:white; font-weight:600; margin-left: 100px;">Live</a>
+  
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" style="margin-top:28px; padding:30px 18px;">
+    <div style="max-width:1100px; margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; align-items:center;">
+      <div>
+        <strong style="font-size:16px;">Get in touch</strong>
+        <p style="margin:6px 0 0; font-size:14px;">Email: <a href="patelayush9554@gmail.com" style="color:#93c5fd;">patelayush9554@gmail.com</a></p>
+      </div>
+      <div class="social">
+        <a href="#"><span>🌐</span></a>
+        <a href="#"><span>🐦</span></a>
+        <a href="#"><span>💼</span></a>
+        <a href="#"><span>📸</span></a>
+      </div>
+      <div style="text-align:right; font-size:14px;">
+        <div>Made with ❤️ • Ayush Patel</div>
+        <div style="font-size:12px; margin-top:6px; color:#ccc;">© 2025 My Portfolio</div>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
